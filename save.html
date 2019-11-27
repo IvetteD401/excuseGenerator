@@ -28,11 +28,15 @@
         <br/>
         <br/>
         <a class="btn btn-primary btn-lg" href="#" role="button" onclick="makeExcuse()">Generate Excuse</a>
+    <!-- <button onclick="makeExcuse()">Try it</button> -->
+    <!-- </div> -->
     </div> 
 
     <script>
         
-        var nounExcuses=[
+        
+        
+        let nounExcuse=[
           {noun:"My dog", source:"https://www.epsilontheory.com/wp-content/uploads/dog-2-2.jpg"},
           {noun:"My grandma", source:"https://imgix.bustle.com/uploads/image/2018/3/26/b9a9d131-9c1b-4990-b3d2-0e0355989468-fotolia_188948342_subscription_monthly_m.jpg?w=970&h=546&fit=crop&crop=faces&auto=format&q=70 "},
           {noun:"The aliens", source:"https://i2-prod.mirror.co.uk/incoming/article17325954.ece/ALTERNATES/s615/2_GettyImages-469559593z.jpg"},
@@ -41,23 +45,23 @@
           {noun:"A stranger", source:"https://i.ytimg.com/vi/uszY3AkyBqA/maxresdefault.jpg"},
           {noun:"The priest", source:"https://www.illustrationsof.com/royalty-free-priest-clipart-illustration-1379899.jpg"},
           {noun:"My baby", source:"https://i.pinimg.com/originals/71/6e/7e/716e7edc9a0998e69c55fc5ce0431f77.jpg"},
-          {noun:"My pet robot", source:"https://vignette.wikia.nocookie.net/villains/images/8/8f/The_Bender.jpg/revision/latest?cb=20180701200006"}
-    ];  
-        var verbs=["tore up", "destroyed", "burned down", "cooked" , "erased", "blocked" , "pooped on" , "stole" , "cursed"];
+          {noun:"My pet robot", source:"https://vignette.wikia.nocookie.net/villains/images/8/8f/The_Bender.jpg/revision/latest?cb=20180701200006"},
+    ]  
+        var verb=["tore up", "destroyed", "burned down", "cooked" , "erased", "blocked" , "pooped on" , "stole" , "cursed"];
         var thing=["my homework" , "my house", "my car" , "my friend" , "my parents" , "my apartment" , "my trailer"];
 
         
-        function makeExcuse() {
-            var subject=Math.floor(Math.random() * nounExcuses.length);
-            document.querySelector('#part1noun').innerHTML = nounExcuses[subject].noun;
-            document.querySelector('#image').src = nounExcuses[subject].source;
-            console.log(verbs);
+        function makeExcuse()
+        var subject=Math.floor(Math.random() * nounExcuses.length)
+            document.querySelector('#part1noun').innerHTML = nounExcuses[subject].noun
+            document.querySelector('#image').src = nounExcuses[subject].source
+         console.log(makeExcuse)
 
-            var subject2  = Math.floor(Math.random() * verbs.length);
-            document.querySelector('#part2verb').innerHTML = verbs[subject2];
+            var verb  = Math.floor(Math.random() * vern.length);
+            document.querySelector('#verb').innerHTML = verb[randomNumber2];
         
-            var subject3 = Math.floor(Math.random() * thing.length);
-            document.querySelector('#part3thing').innerHTML = thing[subject3];
+            var thing = Math.floor(Math.random() * thing.length);
+            document.querySelector('#thing').innerHTML = thing[randomNumber3];
     
                 }
     </script>
