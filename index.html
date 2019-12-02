@@ -12,16 +12,17 @@
 
     <title>Excuse Generator</title>
   </head>
-  <body>
+  <body onclick="makeExcuse()">
     <header>
     <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-secondary">
     <a class="navbar-brand" href="#">Vetty's Awesome Excuse Generator</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-       <div class="form-inline mt-2 mt-md-0 navbar-right" >
+       <!-- <div class="form-inline mt-2 mt-md-0 navbar-right" > -->
+      <form class="form-inline mt-2 mt-md-0 navbar-right" >
         <input class="form-control mr-sm-2" id="newInput" value="" type="text" placeholder="Enter a new verb here!" aria-label="enter a new verb here">
         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="generateVerb()">Generate!</button> -->
       </div>
@@ -29,33 +30,38 @@
         <input class="form-control mr-sm-2" id="newInput2" value="" type="text" placeholder="Enter a new action here!" aria-label="enter a new verb here">
         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="generateAction()">Generate!</button> -->
       </div>
-      <form class="form-inline mt-2 mt-md-0 navbar-right" >
         <input class="form-control mr-sm-2" id="newInput3" value="" type="text" placeholder="Enter a new place here!" aria-label="enter a new verb here">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="generate()">Generate!</button>
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit" onclick="generate()">add</button>
+        <!-- <a class="btn btn-success btn-lg my-2 my-sm-0 float-right" href="#" role="button" >Generate!</a> -->
+        
       </form>
-    </div>
+    <!-- </div> -->
   </nav>
 </header>
-    <div class="jumbotron text-center text-light">
-        <!-- <div class="jumbotron-background"> -->
-       <div class="bg-text">
-        <h1 class="display-4">Excuse Generator:</h1>
-        <h2 class="lead">The most bizarre thing happened to me and you'll think I'm lying, but...</h2>
-        <hr class="my-4">
-        <h3><span id="part1noun"> </span>
-            <span id="part2verb"> </span>
-            <span id="action"> </span>
-            <span id="part3thing"> </span> 
-        </h3> 
+        <div class="jumbotron text-center text-light">
+                <!-- <div class="jumbotron-background"> -->
+<!-- <div class="container-fluid"> -->
+    <!-- <div class="row"> -->
+         <!-- <div class="col-sm-12">/ -->
+            <div class="bg-text mx-auto">
+                <h1 class="display-4">Excuse Generator:</h1>
+                <h2 class="lead">The most bizarre thing happened to me and you'll think I'm lying, but...</h2>
+                <hr class="my-4">
+                <h3><span id="part1noun"> </span>
+                    <span id="part2verb"> </span>
+                    <span id="action"> </span>
+                    <span id="part3thing"> </span> 
+                </h3> 
+            <!-- </div> -->
+        <!-- </div> -->
+    </div>
+    <!-- <div class="col-sm-10"> -->
+        <div class="imageBody mx-auto" >
+            <img class="img-thumbnail" src="" alt="" id="image"> 
         </div>
-        <a class="btn btn-success btn-lg" href="#" role="button" onclick="makeExcuse()">Generate Excuse</a>
-        <div class="imageBody" >
-        <img class="img-thumbnail" src="" alt="" id="image"> 
-        </div>
-        
-        <br/>
-        <br/>
-    </div> 
+    <!-- </div> -->
+<!-- </div> -->
+</div> 
 
     <script>
 
@@ -93,10 +99,18 @@
         function generate(){
             var myValueInput = document.querySelector('#newInput').value;
             verbs.push(myValueInput);
+            if (myValueInput != ""){document.querySelector('#newInput').value};
+            console.log(verbs)
+
             var myValueInput2 = document.querySelector('#newInput2').value;
             action.push(myValueInput2);
+            if (myValueInput2 != ""){document.querySelector('#newInput2').value};
+            console.log(action)
+
             var myValueInput3 = document.querySelector('#newInput3').value;
             thing.push(myValueInput3);
+            if (myValueInput3 != ""){document.querySelector('#newInput3').value};
+            console.log(thing)
       }
     </script>
 

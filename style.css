@@ -1,13 +1,14 @@
 .jumbotron {
         background-image: url(https://image.freepik.com/free-vector/abstract-background_53876-43362.jpg);
         background-size: cover;
-        min-height: 800px; 
+        min-height: 600px; 
         font-family: 'Indie Flower', cursive;  
                 /* Create the parallax scrolling effect */
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         /* background-size: cover; */ 
+        /* padding-top: 15px; */
         }
 
             @media only screen and (max-width: 600px) {
@@ -16,11 +17,18 @@
         }
         }
         .imageBody  {
-        width: 200px;
-        height: 200px;
+        /* width: 300px; */
+        /* height: 250px; */
         align-content: center;
-        margin-left: 850px;
-        margin-top: 100px;
+        /* margin-left: 850px; */
+        /* margin-top: 100px; */
+        /* margin-bottom: 300px; */
+        padding-top: 15px;
+        }
+        #image {
+            width: 250px;
+            height: 250px;
+
         }
         
         .bg-text {
@@ -30,12 +38,13 @@
             font-weight: bold;
             font-size: 80px;
             border: 10px solid #f1f1f1;
-            position: fixed;
+            position: center;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            /* transform: translate(-50%, -50%); */
             z-index: 2;
-            width: 300px;
+            width: 500px;
             padding: 20px;
+            /* margin-top: 150px; */
             text-align: center;
             }
