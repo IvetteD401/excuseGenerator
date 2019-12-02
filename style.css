@@ -16,10 +16,11 @@
         }
         }
         .imageBody  {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         align-content: center;
-
+        margin-left: 850px;
+        margin-top: 100px;
         }
         
         .bg-text {
